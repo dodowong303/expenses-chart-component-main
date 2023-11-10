@@ -1,43 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Sans"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Expenses chart component</title>
 
-  My balance
-  $921.48
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
 
-  Spending - Last 7 days
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container balance">
+        <div class="balance-content">
+          <span>My balance</span>
+          <span class="subtitle">$921.48</span>
+        </div>
+        <img src="images/logo.svg" />
+      </div>
+      <div class="container details">
+        <span class="subtitle">Spending - Last 7 days</span>
+        <div class="bar-chart">
+          <div class="bar-details">
+            <div id="bar-mon" class="bar"></div>
+            <span>mon</span>
+          </div>
+          <div class="bar-details">
+            <div id="bar-tue" class="bar"></div>
+            <span>tue</span>
+          </div>
+          <div class="bar-details">
+            <div id="bar-wed" class="bar"></div>
+            <span>wed</span>
+          </div>
+          <div class="bar-details">
+            <div id="bar-thu" class="bar"></div>
+            <span>thu</span>
+          </div>
+          <div class="bar-details">
+            <div id="bar-fri" class="bar"></div>
+            <span>fri</span>
+          </div>
+          <div class="bar-details">
+            <div id="bar-sat" class="bar"></div>
+            <span>sat</span>
+          </div>
+          <div class="bar-details">
+            <div id="bar-sun" class="bar"></div>
+            <span>sun</span>
+          </div>
+        </div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+        <div class="divider"></div>
+        <div>
+          <span>Total this month</span>
+          <div class="monthly-total">
+            <span class="subtitle">$478.33</span>
+            <div class="monthly-change">
+              <span>+2.4%</span>
+              <span>from last month</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+  </body>
 </html>
