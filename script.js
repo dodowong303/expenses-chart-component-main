@@ -1,39 +1,10 @@
 const getData = async () => {
-  let data = [
-    {
-      day: "mon",
-      amount: 17.45,
-    },
-    {
-      day: "tue",
-      amount: 34.91,
-    },
-    {
-      day: "wed",
-      amount: 52.36,
-    },
-    {
-      day: "thu",
-      amount: 31.07,
-    },
-    {
-      day: "fri",
-      amount: 23.39,
-    },
-    {
-      day: "sat",
-      amount: 43.28,
-    },
-    {
-      day: "sun",
-      amount: 25.48,
-    },
-  ];
+  let data = [];
+
   if (data.length > 0) {
     return data;
   }
-
-  const response = await fetch("data.json");
+  const response = await fetch("https://dodowong303.github.io/expenses-chart-component-main/data.json");
   data = await response.json();
   return data;
 };
