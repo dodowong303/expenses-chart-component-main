@@ -11,10 +11,9 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=DM Sans"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Luxurious+Roman&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Frontend Mentor | Expenses chart component</title>
 
@@ -36,52 +35,59 @@
     <main>
       <div class="container balance">
         <div class="balance-content">
-          <span>My balance</span>
-          <span class="subtitle">$921.48</span>
+          <span class="">My balance</span>
+          <span class="subtitle bold">$921.48</span>
         </div>
         <img src="images/logo.svg" />
       </div>
       <div class="container details">
-        <span class="subtitle">Spending - Last 7 days</span>
+        <span class="subtitle bold">Spending - Last 7 days</span>
         <div class="bar-chart">
           <div class="bar-details">
+            <div id="amount-mon" class="amount hidden"></div>
             <div id="bar-mon" class="bar"></div>
-            <span>mon</span>
+            <span class="caption">mon</span>
           </div>
           <div class="bar-details">
+            <div id="amount-tue" class="amount hidden"></div>
             <div id="bar-tue" class="bar"></div>
-            <span>tue</span>
+            <span class="caption">tue</span>
           </div>
           <div class="bar-details">
+            <div id="amount-wed" class="amount hidden"></div>
             <div id="bar-wed" class="bar"></div>
-            <span>wed</span>
+            <span class="caption">wed</span>
           </div>
           <div class="bar-details">
+            <div id="amount-thu" class="amount hidden"></div>
             <div id="bar-thu" class="bar"></div>
-            <span>thu</span>
+            <span class="caption">thu</span>
           </div>
           <div class="bar-details">
+            <div id="amount-fri" class="amount hidden"></div>
             <div id="bar-fri" class="bar"></div>
-            <span>fri</span>
+            <span class="caption">fri</span>
           </div>
           <div class="bar-details">
+            <div id="amount-sat" class="amount hidden"></div>
             <div id="bar-sat" class="bar"></div>
-            <span>sat</span>
+            <span class="caption">sat</span>
           </div>
           <div class="bar-details">
+            <div id="amount-sun" class="amount hidden"></div>
             <div id="bar-sun" class="bar"></div>
-            <span>sun</span>
+            <span class="caption">sun</span>
           </div>
         </div>
 
         <div class="divider"></div>
-        <div>
-          <span>Total this month</span>
+        <div class="summary">
+          <span class="caption">Total this month</span>
           <div class="monthly-total">
-            <span class="subtitle">$478.33</span>
+            <span class="monthly-total-amount bold">$478.33</span>
             <div class="monthly-change">
-              <span>+2.4%</span>
-              <span>from last month</span>
+              <span class="label bold">+2.4%</span>
+              <span class="caption">from last month</span>
             </div>
           </div>
         </div>
@@ -91,7 +97,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Author</a>.
       </div>
     </main>
   </body>

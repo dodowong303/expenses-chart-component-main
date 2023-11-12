@@ -1,10 +1,13 @@
+.hidden {
+  display: none;
+}
+
 body {
   font-family: "DM Sans";
   font-size: 18px;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+
 
   height: 100vh;
 
@@ -13,12 +16,7 @@ body {
   background: hsl(29, 63%, 92%);
 }
 
-main > * {
-  margin: 10px 0px;
-}
-
 .container {
-  padding: 20px;
   border-radius: 10px;
 }
 
@@ -42,66 +40,209 @@ main > * {
 }
 
 .bar-chart {
-    display: flex;
-    flex-direction: row;
-    
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
 }
 
 .bar-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
 
-    width: 40px;
-    height: 250px
+}
+
+.amount {
+  background: hsl(25, 47%, 15%);
+  color: white;
+
+  border-radius: 5px;
 }
 
 .bar {
-    width: 35px;
-    border-radius: 5px;
-    background: hsl(10, 79%, 65%);
+  border-radius: 5px;
+  background: hsl(10, 79%, 65%);
 }
 
+.bar:hover {
+  background: hsl(10, 79%, 65%, 0.7);
+}
+
+.today {
+  background: hsl(186, 34%, 60%);
+}
+
+.today:hover {
+  background: hsl(186, 34%, 60%, 0.7);
+}
+
+
+
+
 .monthly-total {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
 }
 
 .monthly-change {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 
 .divider {
-    background: hsl(28, 10%, 53%);
-    height: 1px;
+  
+  background: hsl(28, 10%, 53%);
+  height: 1px;
+
+  margin: 30px 5px 10px;
 }
 
 .label {
-    color: hsl(25, 47%, 15%);
+  color: hsl(25, 47%, 15%);
 }
-.subtitle {
-    font-size: large;
-    font-weight: 700;
+
+.caption {
+  color: hsl(28, 10%, 53%);
 }
+
+.bold {
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+
   main {
     margin: auto;
   }
+
+  main > * {
+    margin: 20px 0px;
+  }
+
   .container {
-    max-width: 305px;
+    box-sizing: border-box;
+
+    width: 450px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .balance {
+    height: 105px;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .details {
+    height: 425px;
+
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .summary {
+    margin: 5px 0px;
+  }
+
+
+  .bar-chart {
+    height: 200px;
+  }
+
+  .bar-details {
+    width: 40px;
+  }
+
+  .amount {
+    font-size: xx-small;
+    padding: 7.5px;
+  }
+
+  .bar {
+    box-sizing: border-box;
+
+    width: 40px;
+    margin: 5px 0px;
+  }
+
+  .caption {
+    font-size: 12px;
+  }
+  
+  .subtitle {
+    font-size: 28px;
+  }
+
+  .monthly-total-amount {
+    font-size: 45px;
   }
 }
 
 @media (max-width: 768px) {
   main {
-    padding: 60px 15px;
+    padding: 65px 15px;
+    width: 100%;
+  }
+
+  main > * {
+    margin: 15px 0px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .balance {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .details {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .bar-chart {
+    height: 225px;
+  }
+
+  .amount {
+    font-size: 9px;
+    padding: 5px 7.5px;
+  }
+
+  .bar-details {
+    width: 35px;
+  }
+
+  .bar {
+    box-sizing: border-box;
+
+    width: 35px;
+    margin: 5px 0px;
+  }
+
+  .caption {
+    font-size: 12px;
+  }
+  
+  .subtitle {
+    font-size: 23px;
+  }
+
+  .monthly-total-amount {
+    font-size: 33px;
   }
 }
-
